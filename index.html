@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>16 Febrero 2023</title>
+    <script src="arrayUsers.js"></script>
+    <script src="users.js"></script>
+    <script src="arrayPosts.js"></script>
+    <script src="posts.js"></script>
+    <script src="functions.js"></script>
+</head>
+
+
+<body>
+    <header>
+        
+    </header>
+    
+<table id="tbl">
+    <tr>
+        <th>
+            Id
+        </th>
+
+        <th>
+            Id
+        </th>
+
+        <th>
+            Id
+        </th>
+    </tr>
+
+    <tr>
+        <td>
+            Id
+        </td>
+    </tr>
+</table>
+
+    <form>
+        <label for="name">Nombre</label>
+        <input type="text" id="name" class="name">
+        <br><br>
+
+        <label for="username">Nombre de usuario</label>
+        <input type="text" id="username" class="username">
+        <br><br>
+
+        <label for="email">Email</label>
+        <input type="email" name="email" id="email">
+        <br><br>
+
+        <label for="webPage">Web page</label>
+        <input type="text" id="webPage" class="webPage">
+        <br><br>
+
+        <label for="age">Age</label>
+        <input type="number" id="age" class="age">
+        <br><br>
+<!----- Botones ----->
+        <button type="button" id="addButton">Agregar</button>
+        <button type="button" id="cancelButton">Cancelar</button>
+        <button type="button" id="listButton" class="listButton">Listar</button>
+        <button type="button" id="searchButton">Buscar</button>
+    </form>
+<!-- Show section -->
+    <div id="showSection">
+        
+    </div>
+
+    <footer>
+        
+    </footer>
+    
+    <script src="main.js"></script>
+    <script>
+        const objectUsers = new Users(users);
+        console.log(objectUsers.list());
+    </script>
+</body>
+
+</html>
