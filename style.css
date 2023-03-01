@@ -1,0 +1,17 @@
+body{
+    background-color: rgb(102, 102, 102);
+}
+
+form{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+table{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* .showSection, form{
+    display: inline-block;
+    width: 45%;
+    margin-right: 10px;
+} */

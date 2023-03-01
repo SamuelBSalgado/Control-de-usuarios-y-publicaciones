@@ -31,7 +31,7 @@ class Users {
     list(){ // Devolver todos los datos del vector.
         // let array = [];
         if(this.userData.length == 0){
-            return false;
+            return "";
         } else if(users.length > 0){
             return this.userData;
         }

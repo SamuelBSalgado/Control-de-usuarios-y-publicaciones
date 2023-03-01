@@ -7,3 +7,9 @@ function clean(){
 
     showSection.innerHTML = '';
 }
+
+// function imprimirTabla(users) {
+//     // Obtiene el elemento tbody de la tabla
+    
+//     }
+// }
