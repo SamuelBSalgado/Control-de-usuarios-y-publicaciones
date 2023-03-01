@@ -8,18 +8,18 @@ const table = document.getElementById('tbl');
 addButton.addEventListener('click', () => {
     //Guardar valores puestos en los input en variables
     let name = document.getElementById('name').value;
-    let userName = document.getElementById('username').value;
+    let username = document.getElementById('username').value;
     let email = document.getElementById('email').value;
-    let webPage = document.getElementById('webPage').value;
+    let website = document.getElementById('webPage').value;
     let age = document.getElementById('age').value;
 
 //Crear nuevo objeto usuario con los valores nuevos de los inputs
     let objct = {
         "id": undefined,
         "name": name,
-        "userName": userName,
+        "username": username,
         "email": email,
-        "webPage": webPage,
+        "website": website,
         "age": age
     }
 
@@ -39,59 +39,37 @@ listButton.addEventListener('click', () => {
         return showSection.innerHTML="Aún no hay registros que mostrar";
     } else{
     objectUsers.list().forEach(element => {
-        table.innerHTML += 
+        showSection.innerHTML += 
         `<div>
-            <ul>
-                <li>
-                    ${element.id}
-                </li>
-            
-                </ul>
-            <ul>
-                <li>
-                    ${element.name}
-                </li>
-            </ul>
-            <ul>
-                <li>
-                    ${element.username}
-                </li>
-            </ul>
-            <ul>
-                <li>
-                    ${element.email}
-                </li>
-            </ul>
-            <ul>
-                <li>
-                    ${element.webPage}
-                </li>
-            </ul>
-            <ul>
-                <li>
-                    ${element.age}
-                </li>
-            </ul>
+            Id: ${element.id}, 
+            Nombre: ${element.name}, 
+            Nombre de usuario: ${element.username}, 
+            E-mail: ${element.email},
+            Página web: ${element.website}, 
+            Edad: ${element.age}.
+            <br><br>
         </div>`
     });
     }
 });
 
 searchButton.addEventListener('click', () => {
-    let nombre = document.getElementById('name').value;
+    let nombreUsuario = document.getElementById('username').value;
 
     //Limpiar todo lo impreso
     clean();
 
-    let query = objectUsers.search(nombre);
+    let query = objectUsers.search(nombreUsuario);
     if(query == false){
         showSection.innerHTML = "Aún no hay registros con ese nombre de usuario"
     } else{
         showSection.innerHTML = 
     `<div>
         Nombre: ${query.name}, 
+        Nombre de usuario: ${query.username}, 
         E-mail: ${query.email}, 
-        Teléfono: ${query.phone}.
+        Página Web: ${query.website}, 
+        Edad: ${query.age}.
     </div>`
     }
     // objectUsers.search(nombre, email, telefono);
@@ -101,3 +79,6 @@ cancelButton.addEventListener('click', () => {
     //Limpiar todo lo impreso
     clean();
 });
+
+let tabla = document.getElementById('tbl');
+// tabla.removeAttribute('hidden');
